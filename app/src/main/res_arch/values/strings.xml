@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">PRM_Project1</string>
+    <string name="add_icon">Plus Icon to add another record</string>
+    <string name="delete_icon">Icon to deleted selected record</string>
+    <string name="taskTitle">TaskTitle example</string>
+    <string name="done">Done ?</string>
+    <string name="save">Zapisz</string>
+
+    <string name="nameLabel">Name: </string>
+    <string name="dateLabel">Date: </string>
+    <string name="priorityLabel">Priority: </string>
+    <string name="progressLabel">Progress: </string>
+
+    <string name="nameHelper">Please provide task name</string>
+    <string name="dateHelper">Please provide deadline</string>
+    <string name="priorityHelper">Please choose priority</string>
+
+    <string name="low">Low Priority</string>
+    <string name="mid">Medium Priority</string>
+    <string name="high">High Priority</string>
+
+    //Examples
+    <string name="name1">Example Task Name 1</string>
+    <string name="priority1">Medium</string>
+    <string name="date1">1999-01-01</string>
+    <string name="progress1">88%</string>
+    <string name="name2">Example Task Name 2</string>
+    <string name="priority2">Medium</string>
+    <string name="date2">1999-01-02</string>
+    <string name="progress2">90%</string>
+    <string name="name3">Example Task Name 3</string>
+    <string name="priority3">High</string>
+    <string name="date3">1999-01-03</string>
+    <string name="progress3">92%</string>
+    <string name="name4">Example Task Name 4</string>
+    <string name="priority4">High</string>
+    <string name="date4">1999-01-04</string>
+    <string name="progress4">94%</string>
+    <string name="name5">Example Task Name 5</string>
+    <string name="priority5">Low</string>
+    <string name="date5">1999-01-05</string>
+    <string name="progress5">96%</string>
+</resources>

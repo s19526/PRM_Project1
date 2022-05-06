@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".AddTaskActivity">
+
+    <TextView
+        android:id="@+id/nameLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        android:text="@string/nameLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/dateLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLabel" />
+
+    <TextView
+        android:id="@+id/priorityLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/priorityLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dateLabel" />
+
+    <TextView
+        android:id="@+id/progressLabel"
+        android:layout_width="101dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/progressLabel"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup"/>
+
+<Button
+    android:id="@+id/saveButton"
+    android:layout_width="0dp"
+    android:layout_height="60sp"
+    android:layout_marginStart="24dp"
+    android:layout_marginEnd="24dp"
+    android:layout_marginBottom="24dp"
+    android:text="@string/save"
+    app:layout_constraintBottom_toBottomOf="parent"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.0"
+    app:layout_constraintStart_toStartOf="parent" />
+
+   <EditText
+       android:id="@+id/dateInput"
+       android:layout_width="0dp"
+       android:layout_height="48dp"
+       android:layout_marginStart="150dp"
+       android:layout_marginEnd="24dp"
+       android:autofillHints=""
+       android:ems="10"
+       android:inputType="date"
+       android:text="@string/dateHelper"
+       android:textAppearance="@style/TextAppearance.AppCompat.Small"
+       app:layout_constraintBottom_toTopOf="parent"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintHorizontal_bias="1.0"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toTopOf="parent" />
+
+   <RadioGroup
+       android:id="@+id/radioGroup"
+       android:layout_width="385dp"
+       android:layout_height="wrap_content"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="30dp"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/priorityLabel">
+
+       <RadioButton
+           android:id="@+id/radioButton1"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/low"
+           android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+       <RadioButton
+           android:id="@+id/radioButton2"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/mid"
+           android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+       <RadioButton
+           android:id="@+id/radioButton3"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:text="@string/high"
+           android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+   </RadioGroup>
+
+   <SeekBar
+       android:id="@+id/progressInput"
+       style="@style/Widget.AppCompat.SeekBar"
+       android:layout_width="0dp"
+       android:layout_height="53dp"
+       android:layout_marginStart="24dp"
+       android:layout_marginTop="30dp"
+       android:layout_marginEnd="24dp"
+       android:progress="1"
+       android:progressTint="#EA1717"
+       app:layout_constraintEnd_toEndOf="parent"
+       app:layout_constraintStart_toStartOf="parent"
+       app:layout_constraintTop_toBottomOf="@+id/progressLabel" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
