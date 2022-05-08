@@ -5,6 +5,9 @@
     <string name="taskTitle">TaskTitle example</string>
     <string name="save">Save task</string>
     <string name="edit">Edit details</string>
+    <string name="yes">Yes!</string>
+    <string name="no">No!</string>
+    <string name="popUpText">Mark as done?</string>
 
     <string name="nameLabel">Name: </string>
     <string name="dateLabel">Date: </string>

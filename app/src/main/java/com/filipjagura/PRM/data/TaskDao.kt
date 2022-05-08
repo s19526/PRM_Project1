@@ -14,8 +14,8 @@ interface TaskDao {
     @Query("SELECT * FROM TaskDto WHERE done=0 AND date>= DATE('NOW') ORDER BY date ASC")
     fun getNotDoneNotExpired(): List<TaskDto>
 
-    @Query("SELECT * FROM TaskDto WHERE done=0 AND date BETWEEN DATE() AND DATE('NOW','weekday 0') ORDER BY date ASC")
-    fun getNotDoneTillEndOfWeek(): List<TaskDto>
+    @Query("SELECT COUNT(*) FROM TaskDto WHERE done=0 AND date BETWEEN DATE() AND DATE('NOW','weekday 0') ORDER BY date ASC")
+    fun getNotDoneTillEndOfWeek(): Long
 
     @Query("SELECT * FROM TaskDto WHERE id=:id")
     fun findById(id: Long) : TaskDto

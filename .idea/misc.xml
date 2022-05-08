@@ -17,6 +17,14 @@
         <entry key="..\:/Users/fjagu/Documents/PRM_Project1/app/src/main/res/layout/activity_task_details.xml" value="0.16084093211752787" />
         <entry key="..\:/Users/fjagu/Documents/PRM_Project1/app/src/main/res/layout/item_task.xml" value="0.33" />
         <entry key="..\:/Users/fjagu/Documents/PRM_Project1/app/src/main/res/layout/task_item.xml" value="0.33" />
+        <entry key="app/src/main/res/drawable/circle.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/circle2.xml" value="0.126" />
+        <entry key="app/src/main/res/drawable/delete_trash.xml" value="0.126" />
+        <entry key="app/src/main/res/layout/activity_add_task.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.11510416666666666" />
+        <entry key="app/src/main/res/layout/activity_open_task_details.xml" value="0.1457529703776042" />
+        <entry key="app/src/main/res/layout/activity_pop_up_window.xml" value="0.22809855143229169" />
+        <entry key="app/src/main/res/layout/item_task.xml" value="0.11510416666666666" />
       </map>
     </option>
   </component>

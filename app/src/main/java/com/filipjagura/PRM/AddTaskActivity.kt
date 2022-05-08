@@ -26,6 +26,7 @@ class AddTaskActivity : AppCompatActivity() {
     }
 
     private fun setupLoad(){
+        println("Add task - data loaded")
         this.id = intent.getLongExtra("taskId",0)
         if(id>0){
             executor.submit(){
@@ -44,12 +45,12 @@ class AddTaskActivity : AppCompatActivity() {
     }
 
     private fun setupSave() = view.saveButton.setOnClickListener{
-
+        println("Add task - save button clicked")
         executor.submit{
             var taskDto=TaskDto(
                 id=id,
                 title = view.nameInput.text.toString().ifEmpty { "" },
-                date = LocalDate.parse(view.dateInput.text.toString()).toString().ifEmpty { "" },
+                date = view.dateInput.text.toString().ifEmpty { "" },
                 priority = when(view.radioGroup.checkedRadioButtonId){
                     radioButton1.id->radioButton1.text.toString()
                     radioButton2.id->radioButton2.text.toString()
@@ -69,6 +70,7 @@ class AddTaskActivity : AppCompatActivity() {
     }
 
     override fun onDestroy() {
+        println("Add task - destroy")
         super.onDestroy()
         executor.shutdownNow()
     }
