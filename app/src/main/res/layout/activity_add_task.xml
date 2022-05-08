@@ -40,11 +40,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="24dp"
-            android:layout_marginTop="16dp"
             android:text="@string/priorityLabel"
             android:textAppearance="@style/TextAppearance.AppCompat.Large"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/dateLabel" />
+            app:layout_constraintTop_toBottomOf="@+id/dateInput" />
 
         <TextView
             android:id="@+id/progressLabel"
@@ -102,22 +101,6 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="TextContrastCheck" />
-
-        <EditText
-            android:id="@+id/dateInput"
-            android:layout_width="0dp"
-            android:layout_height="48dp"
-            android:layout_marginStart="150dp"
-            android:layout_marginEnd="24dp"
-            android:ems="10"
-            android:focusable="true"
-            android:hint="@string/dateHelper"
-            android:inputType="date"
-            android:textAppearance="@style/TextAppearance.AppCompat.Small"
-            app:layout_constraintBaseline_toBaselineOf="@+id/dateLabel"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toStartOf="parent" />
 
         <SeekBar
             android:id="@+id/progressInput"
@@ -180,7 +163,22 @@
                 android:layout_height="wrap_content"
                 android:text="@string/high"
                 android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
         </RadioGroup>
+
+        <DatePicker
+            android:id="@+id/dateInput"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="24dp"
+            android:calendarViewShown="false"
+            android:datePickerMode="spinner"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/nameInput" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
 

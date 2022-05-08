@@ -32,8 +32,8 @@ class AddTaskActivity : AppCompatActivity() {
             executor.submit(){
                     val taskDto=db.taskDto.findById(id)
                     view.nameInput.setText(taskDto.title)
-                    view.dateInput.setText(taskDto.date)
-                    when(taskDto.priority){
+                    view.dateInput.init(LocalDate.parse(taskDto.date).year, LocalDate.parse(taskDto.date).monthValue-1,LocalDate.parse(taskDto.date).dayOfMonth) { _, _, _, _ -> }
+                when(taskDto.priority){
                         radioButton1.text->radioGroup.check(radioButton1.id)
                         radioButton2.text->radioGroup.check(radioButton2.id)
                         radioButton3.text->radioGroup.check(radioButton3.id)
@@ -50,7 +50,7 @@ class AddTaskActivity : AppCompatActivity() {
             var taskDto=TaskDto(
                 id=id,
                 title = view.nameInput.text.toString().ifEmpty { "" },
-                date = view.dateInput.text.toString().ifEmpty { "" },
+                date = LocalDate.of(view.dateInput.year,view.dateInput.month+1,view.dateInput.dayOfMonth).toString(),
                 priority = when(view.radioGroup.checkedRadioButtonId){
                     radioButton1.id->radioButton1.text.toString()
                     radioButton2.id->radioButton2.text.toString()
@@ -60,6 +60,7 @@ class AddTaskActivity : AppCompatActivity() {
                 progress = view.progressInput.progress,
                 estimate = view.estimateInput.text.toString().toDouble(),
             )
+            println(taskDto.date)
             when(id){
                 0L -> db.taskDto.insert(taskDto)
                 else -> db.taskDto.update(taskDto)
